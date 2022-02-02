@@ -1,40 +1,57 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Hello Bulma!</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"
+    />
+    <link rel="stylesheet" href="./assets/style.css" />
   </head>
   <body>
+    <section class="image">
+      <header>
+        <div class="hero-body">
+          <h1 class="title" id="main-title">
+            COCKTAIL PARTY
+          </h1>
+      </header>
+      <button class="button is-rounded" id="main-button"><h2><a href="#Learn-More">Learn More</a></h2></button>
+    </section>
+    
+
+
     <div class="columns">
       <div class="column">
-      <section class="section has-bg-img" id="search-box">
-        <div class="container">
-          <h1 class="title">Want to search a cocktail you know about?</h1>
-          <h2>Enter cocktail name</h2>
-          <br>
-          <div class="control">
-            <input class="input" type="text">
+        <section class="section has-bg-img" id="search-box">
+          <div class="container">
+            <h1 class="title">Want to search a cocktail you know about?</h1>
+            <h2>Enter cocktail name</h2>
+            <br />
+            <div class="control">
+              <input class="input" type="text" />
+            </div>
+            <br />
+            <div class="control">
+              <button class="button is-link">Press Me!!!</button>
+            </div>
           </div>
-          <br>
-          <div class="control">
-            <button class="button is-primary">Press Me!!!</button>
-          </div>
-        </div>
-      </section>
+        </section>
       </div>
+      <div id="Learn-More"></div>
+
       <div class="column">
         <section class="section has-bg-img" id="search-box">
           <h1 class="title">Want a random drink?</h1>
           <h2>Press here for a random suggestion</h2>
-          <br>
-            <div class="control">
-              <button class="button is-primary"
-              >Press Me!!!</button>
-            </div>
+          <br />
+          <div class="control">
+            <button class="button is-link">Press Me!!!</button>
+          </div>
         </section>
-        </div>
+      </div>
     </div>
   </body>
 </html>
