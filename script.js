@@ -7,6 +7,10 @@ function randomCocktail() {
     .catch((error) => console.log(error))
 }
 
+function userInputCocktail(){
+    
+}
+
 function randomCocktailHTML(details) {
     var { drinks } = details
     var picture = document.getElementById('picture')
