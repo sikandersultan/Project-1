@@ -29,7 +29,7 @@ function randomRecipeHTML(details) {
     var information = `<p>${details.meals[0][measuringKey]} ${ingredient}</p>`;
     ingredientInfo.push(information);
   }
-  mealInfo.html(ingredientInfo.join(""));
+  mealInfo.html(`<p>Ingredients:</p><p>${ingredientInfo.join("")}</p>`);
 
   var instructions = $("#instructions");
   instructions.html(
