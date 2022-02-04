@@ -55,3 +55,33 @@ body {
   border-color: inherit;
   transition: transform 0.5s ease-in;
 }
+.to-top:hover {
+  color: green;
+  border-color: green;
+}
+.to-top:hover:before {
+  transform: rotate(360deg);
+}
+
+.column {
+  margin-top: -500px;
+  margin-right: 200px;
+}
+
+.column-2 {
+  border: black 2px solid;
+  border-radius: 70px;
+}
+
+.columns {
+  margin-top: 20px;
+  margin-right: 80px;
+}
+
+.plan {
+  visibility: hidden;
+}
+
+.show {
+  visibility: visible;
+}
