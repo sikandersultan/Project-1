@@ -1,7 +1,57 @@
 .image {
-  background-image: url(../latin-cocktails-party.webp);
-  height: 650px;
+  background-image: url(../pexels-elle-hughes-1660030.jpg);
+  height: 610px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+#main-title {
+  float: inline-start;
+  text-align: start;
+  margin-top: 2px;
+  margin-left: 860px;
+}
+#categories {
+  height: 160px;
+  width: 310px;
+  margin: 0;
+}
+
+.form-input {
+  display: inline-block;
+}
+body {
+  text-align: center;
+  font-size: 180%;
+
+  font-family: Calibri, arial, sans-serif;
+}
+.to-top {
+  color: black;
+  padding-top: 28px;
+  display: inline-block;
+  position: relative;
+  border-color: black;
+  text-decoration: none;
+  transition: all 0.3s ease-out;
+  margin-top: 400px;
+  margin-left: 50%;
+  font-weight: bolder;
+  font-size: xx-large;
+}
+.to-top:before {
+  content: "▲";
+  font-size: 14px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -12px;
+  border: solid 2 white;
+  border-radius: 160px;
+  width: 22px;
+  height: 22px;
+  line-height: 21px;
+  border-color: inherit;
+  transition: transform 0.5s ease-in;
 }
