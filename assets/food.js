@@ -1,3 +1,5 @@
+var searchHistory = [];
+
 function randomRecipe() {
   fetch("https://www.themealdb.com/api/json/v1/1/random.php")
     .then((Response) => Response.json())
@@ -36,12 +38,10 @@ function displayRecipeHTML(details) {
   );
 }
 
-function searchRecipe() {
-  var userInput = $("#userInput");
-  if (userInput.val().trim() !== "") {
+function searchRecipe(keyWord) {
+  if (keyWord !== "") {
     var queryURL =
-      "https://www.themealdb.com/api/json/v1/1/search.php?s=" +
-      userInput.val().trim();
+      "https://www.themealdb.com/api/json/v1/1/search.php?s=" + keyWord;
 
     fetch(queryURL)
       .then((Response) => Response.json())
@@ -50,6 +50,14 @@ function searchRecipe() {
           errorMsg("Meal not found._. Please try something else!");
         } else {
           displayRecipeHTML(details);
+          if (!searchHistory.includes(keyWord)) {
+            searchHistory.push(keyWord);
+            localStorage.setItem(
+              "searchHistory",
+              JSON.stringify(searchHistory)
+            );
+            loadSearchHistory();
+          }
         }
       });
   } else {
@@ -63,7 +71,34 @@ function errorMsg(msg) {
 function close() {
   $("#modalId").removeClass("is-active");
 }
+function loadSearchHistory() {
+  searchHistory = JSON.parse(localStorage.getItem("searchHistory"));
+  var container = $("#searchHistory");
+  container.empty();
+  if (searchHistory !== null) {
+    for (var i = 0; i < searchHistory.length; i++) {
+      var pEl = $("<p>");
+      pEl.attr("class", "control");
+      var btnEl = $("<button>");
+      btnEl.attr("class", "button is-link history");
+      btnEl.html(searchHistory[i]);
+      pEl.append(btnEl);
+      container.append(pEl);
+    }
+  }
+}
+function invokePastSearch(event) {
+  var btnEl = event.target;
+  if (event.target.matches(".history")) {
+    var keyWord = btnEl.textContent.trim();
+    searchRecipe(keyWord);
+  }
+}
 
 $("#randomRecipe").click(randomRecipe);
-$("#searchRecipe").click(searchRecipe);
+$("#searchRecipe").click(function () {
+  var keyWord = $("#userInput").val().trim();
+  searchRecipe(keyWord);
+});
 $("#modalBtn").click(close);
+$(document).on("click", invokePastSearch);
