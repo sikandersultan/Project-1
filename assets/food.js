@@ -46,10 +46,24 @@ function searchRecipe() {
     fetch(queryURL)
       .then((Response) => Response.json())
       .then((details) => {
-        displayRecipeHTML(details);
+        if (details.meals === null) {
+          errorMsg("Meal not found._. Please try something else!");
+        } else {
+          displayRecipeHTML(details);
+        }
       });
+  } else {
+    errorMsg("Please enter something");
   }
+}
+function errorMsg(msg) {
+  $("#modalId").addClass("is-active");
+  $("#modalMsg").html(msg);
+}
+function close() {
+  $("#modalId").removeClass("is-active");
 }
 
 $("#randomRecipe").click(randomRecipe);
 $("#searchRecipe").click(searchRecipe);
+$("#modalBtn").click(close);
