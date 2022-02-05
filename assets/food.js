@@ -1,5 +1,6 @@
 var searchHistory = [];
 
+//generate random recipe
 function randomRecipe() {
   fetch("https://www.themealdb.com/api/json/v1/1/random.php")
     .then((Response) => Response.json())
@@ -8,6 +9,7 @@ function randomRecipe() {
     });
 }
 
+//display the recipe on the page
 function displayRecipeHTML(details) {
   var picture = $("#picture");
   var foodPic =
@@ -38,6 +40,7 @@ function displayRecipeHTML(details) {
   );
 }
 
+// search recipe based on keyword and store the search history in local storage
 function searchRecipe(keyWord) {
   if (keyWord !== "") {
     var queryURL =
@@ -64,13 +67,19 @@ function searchRecipe(keyWord) {
     errorMsg("Please enter something");
   }
 }
+
+//display error when user input is invalid
 function errorMsg(msg) {
   $("#modalId").addClass("is-active");
   $("#modalMsg").html(msg);
 }
+
+//close the error message
 function close() {
   $("#modalId").removeClass("is-active");
 }
+
+//display search history
 function loadSearchHistory() {
   searchHistory = JSON.parse(localStorage.getItem("searchHistory"));
   var container = $("#searchHistory");
@@ -87,6 +96,8 @@ function loadSearchHistory() {
     }
   }
 }
+
+//display recipe when user clicks on the search history
 function invokePastSearch(event) {
   var btnEl = event.target;
   if (event.target.matches(".history")) {
@@ -95,6 +106,7 @@ function invokePastSearch(event) {
   }
 }
 
+//respond when user clicks on buttons
 $("#randomRecipe").click(randomRecipe);
 $("#searchRecipe").click(function () {
   var keyWord = $("#userInput").val().trim();
