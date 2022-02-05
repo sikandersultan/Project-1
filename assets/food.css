@@ -16,10 +16,15 @@
   height: 160px;
   width: 310px;
   margin: 0;
+  color: white;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .form-input {
-  margin-right: 800px;
+  margin-right: 950px;
+  margin-top: -270px;
 }
 body {
   text-align: center;
@@ -81,4 +86,20 @@ body {
 
 .show {
   visibility: visible;
+}
+
+#image-styling {
+  background-image: url(../download.jpg);
+}
+
+#background-style {
+  background-image: url(../istockphoto-1194435519-612x612.jpg);
+}
+
+#seafood-image {
+  background-image: url(../download\ 876.jpg);
+}
+
+#dessert-image {
+  background-image: url(../photo-1574085733277-851d9d856a3a.jpg);
 }
