@@ -1,5 +1,5 @@
 .image {
-  background-image: url(../pexels-elle-hughes-1660030.jpg);
+  background-image: url(../assets/images/pexels-elle-hughes-1660030.jpg);
   height: 610px;
   background-position: center;
   background-repeat: no-repeat;
@@ -89,17 +89,17 @@ body {
 }
 
 #image-styling {
-  background-image: url(../download.jpg);
+  background-image: url(../assets/images/download.jpg);
 }
 
 #background-style {
-  background-image: url(../istockphoto-1194435519-612x612.jpg);
+  background-image: url(../assets/images/istockphoto-1194435519-612x612.jpg);
 }
 
 #seafood-image {
-  background-image: url(../download\ 876.jpg);
+  background-image: url(../assets/images/download\ 876.jpg);
 }
 
 #dessert-image {
-  background-image: url(../photo-1574085733277-851d9d856a3a.jpg);
+  background-image: url(../assets/images/photo-1574085733277-851d9d856a3a.jpg);
 }
