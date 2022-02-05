@@ -2,12 +2,11 @@ function randomRecipe() {
   fetch("https://www.themealdb.com/api/json/v1/1/random.php")
     .then((Response) => Response.json())
     .then((details) => {
-      randomRecipeHTML(details);
+      displayRecipeHTML(details);
     });
 }
 
-function randomRecipeHTML(details) {
-  console.log(details);
+function displayRecipeHTML(details) {
   var picture = $("#picture");
   var foodPic =
     "<img class='mealThumb' src=" + details.meals[0].strMealThumb + ">";
@@ -37,4 +36,20 @@ function randomRecipeHTML(details) {
   );
 }
 
+function searchRecipe() {
+  var userInput = $("#userInput");
+  if (userInput.val().trim() !== "") {
+    var queryURL =
+      "https://www.themealdb.com/api/json/v1/1/search.php?s=" +
+      userInput.val().trim();
+
+    fetch(queryURL)
+      .then((Response) => Response.json())
+      .then((details) => {
+        displayRecipeHTML(details);
+      });
+  }
+}
+
 $("#randomRecipe").click(randomRecipe);
+$("#searchRecipe").click(searchRecipe);
