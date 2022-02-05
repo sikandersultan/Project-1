@@ -1,0 +1,105 @@
+.image {
+  background-image: url(../assets/images/pexels-elle-hughes-1660030.jpg);
+  height: 610px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#main-title {
+  float: inline-start;
+  text-align: start;
+  margin-top: 2px;
+  margin-left: 860px;
+}
+.is-large {
+  height: 160px;
+  width: 310px;
+  margin: 0;
+  color: white;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.form-input {
+  margin-right: 950px;
+  margin-top: -270px;
+}
+body {
+  text-align: center;
+}
+.to-top {
+  color: black;
+  padding-top: 28px;
+  display: inline-block;
+  position: relative;
+  border-color: black;
+  text-decoration: none;
+  transition: all 0.3s ease-out;
+  margin-top: 520px;
+  margin-right: 50%;
+  font-weight: bolder;
+  font-size: xx-large;
+}
+.to-top:before {
+  content: "▲";
+  font-size: 14px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -12px;
+  border: solid 2 black;
+  border-radius: 160px;
+  width: 22px;
+  height: 22px;
+  line-height: 21px;
+  border-color: inherit;
+  transition: transform 0.5s ease-in;
+}
+.to-top:hover {
+  color: green;
+  border-color: green;
+}
+.to-top:hover:before {
+  transform: rotate(360deg);
+}
+
+.column {
+  margin-top: -500px;
+  margin-right: 200px;
+}
+
+.column-2 {
+  border: black 2px solid;
+  border-radius: 70px;
+}
+
+.columns {
+  margin-top: 20px;
+  margin-right: 80px;
+}
+
+.plan {
+  visibility: hidden;
+}
+
+.show {
+  visibility: visible;
+}
+
+#image-styling {
+  background-image: url(../assets/images/download.jpg);
+}
+
+#background-style {
+  background-image: url(../assets/images/istockphoto-1194435519-612x612.jpg);
+}
+
+#seafood-image {
+  background-image: url(../assets/images/download\ 876.jpg);
+}
+
+#dessert-image {
+  background-image: url(../assets/images/photo-1574085733277-851d9d856a3a.jpg);
+}
