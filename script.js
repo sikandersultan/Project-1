@@ -16,7 +16,7 @@ cocktailFormEl.addEventListener("submit", (event) => {
     var searchValue = searched.value
    
     if (!searchValue) {
-       alert("The user did not enter a cocktail to search for")
+        errorMsg("We need a name for a drink plsssssss thank you :)")
     } else {
         userInputCocktail(searchValue)
         console.log(searchValue)
@@ -30,6 +30,7 @@ function userInputCocktail (somethingIdk) {
         var { drinks }= details
         if (drinks === null) {
             console.log("noooooooo")
+            errorMsg("It seems the drink does not exist. Big Ooofs.")
             // we got stuff back good 
         } else {
             // something probably went wrong
@@ -91,13 +92,11 @@ function userCocktailHTML(details) {
     cocktailInformation.innerHTML = ingredientInfo.join('')
 }
 
-var btn = document.querySelector('#showModal');
-var modalDlg = document.querySelector('#image-modal');
-var imageModalCloseBtn = document.querySelector('#image-modal-close');
-btn.addEventListener('click', function(){
-  modalDlg.classList.add('is-active');
-});
-
-imageModalCloseBtn.addEventListener('click', function(){
-  modalDlg.classList.remove('is-active');
-});
+function errorMsg(msg) {
+  $("#modalId").addClass("is-active");
+  $("#modalMsg").html(msg);
+}
+function close() {
+  $("#modalId").removeClass("is-active");
+}
+$("#modalBtn").click(close);

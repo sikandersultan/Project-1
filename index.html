@@ -66,23 +66,17 @@
             <div id="ingridients"></div>
             <div id="instructions"></div>
         </div>
-        <div class="container" id="app">
-          <div id="image-modal" class="modal">
-            <div class="modal-background"></div>
-            <div class="modal-content">
-             <div class="modal-card">
+        <div class="modal" id="modalId">
+          <div class="modal-background"></div>
+          <div class="modal-card">
             <header class="modal-card-head">
-              <p class="modal-card-title">Modal title</p>
+              <p class="modal-card-title" id="modalMsg"></p>
+              
             </header>
-            <section class="modal-card-body">
-              <p>AAAAAAAAAAAAAA REEEEEEEEEEEEEEEEEEEEEEEEEE</p>
-            </section>
+            <footer class="modal-card-body is-centered">
+              <button class="button" id="modalBtn">Close</button>
+            </footer>
           </div>
-            </div>
-            <button id="image-modal-close" class="modal-close"></button>
-          </div>
-          <br>
-            <button class="button" id="showModal">Show</button>
         </div>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="./script.js"></script>
