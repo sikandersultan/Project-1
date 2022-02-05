@@ -7,8 +7,9 @@ function randomCocktail() {
     .catch((error) => console.log(error))
 }
 
+var searched = document.getElementById
 function userInputCocktail(){
-    
+
 }
 
 function randomCocktailHTML(details) {
