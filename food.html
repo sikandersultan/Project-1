@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<<<<<<< HEAD
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -9,58 +8,81 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"
     />
-    <link rel="stylesheet" href="assets/food.css">
+    <link rel="stylesheet" href="./assets/food.css" />
     <title>Food Party</title>
   </head>
   <body>
     <header>
-        <div class="hero-body">
-          <h1 class="title" id="main-title">
-            FOOD PARTY
-          </h1>
-      </header>
-      <button class="button is-rounded" id="main-button"><h2><a href="#Learn-More">Learn More</a></h2></button>
-      <div class="columns">
-        <div class="column">
+      <div class="image">
+        <a href="#click-here" class="to-top">Click Here</a>
+      </div>
+    </header>
+
+    <div class="columns">
+      <div class="column">
         <section class="section has-bg-img" id="search-box">
           <div class="container">
             <h1 class="title">Want to search a Food Recipe you know about?</h1>
             <h2>Enter Recipe name</h2>
-            <br>
+            <br />
             <div class="control">
-              <input class="input" type="text" id="userInput">
+              <input class="input" type="text" id="userInput" />
             </div>
-            <br>
+            <br />
+
             <div class="control">
-              <button class="button is-primary" id="searchRecipe">Press Me!!!</button>
+              <button class="button is-primary">Press Me!!!</button>
             </div>
           </div>
         </section>
-        </div>
-        <div id="Learn-More"></div>
-        <div class="column">
-          <section class="section has-bg-img" id="search-box">
-            <h1 class="title">Want a random Recipe?</h1>
-            <h2>Press here for a random suggestion</h2>
-            <br>
-              <div class="control">
-                <button class="button is-primary" id="randomRecipe">Press Me!!!</button>
-              </div>
-          </section>
+      </div>
+
+      <div id="click-here"></div>
+      <div class="column-2">
+        <section class="section has-bg-img" id="search-box">
+          <h1 class="title">Want a random Recipe?</h1>
+          <h2>Press here for a random suggestion</h2>
+          <br />
+          <div class="control">
+            <button class="button is-primary" id="randomDrink">
+              Press Me!!!
+            </button>
           </div>
       </div>
-      <div class = "search-result">
-        <div class="row" id="#display">
-          <div class="col-xs-push-2 col-xs-5" id="picture"></div>
-          <div class="col-xs-push-1 col-xs-4" id="info">
-              <div id="name"></div>
-              <div id="ingredients"></div>
-              <div id="instructions"></div>
-          </div>
+      </div>
+    </section>
+
+    <div class="search-result">
+      <div class="row" id="#display">
+        <div class="col-xs-push-2 col-xs-5" id="picture"></div>
+        <div class="col-xs-push-1 col-xs-4" id="info">
+          <div id="name"></div>
+          <div id="ingredients"></div>
+          <div id="instructions"></div>
         </div>
       </div>
-      <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-      <script src="./assets/food.js"></script>
- 
-    </body>
+    </div>
+
+    <section class="form-input">
+      <div class="categories1">
+        <button class="button is-large" id="image-styling">Vegetarian</button>
+        <p class="Vegetarian"></p>
+      </div>
+      <div class="categories2">
+        <button class="button is-large" id="background-style">Chicken</button>
+        <p class="chicken"></p>
+      </div>
+      <div class="categories3">
+        <button class="button is-large" id="seafood-image">Seafood</button>
+        <p class="seafood"></p>
+      </div>
+      <div class="categories4">
+        <button class="button is-large" id="dessert-image">Dessert</button>
+        <p class="Dessert"></p>
+      </div>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="./assets/food.js"></script>
+  </body>
 </html>
