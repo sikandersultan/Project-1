@@ -1,71 +1,79 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Hello Bulma!</title>
-    <script
-    src="https://code.jquery.com/jquery-3.5.1.min.js"
-    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
-    crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./assets/style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
-  </head>
-  <body>
-    <section class="image">
-      <nav class="navbar-end">
-        <a class="navbar-item"> Recipes </a>
-        <a class="navbar-item"> More </a>
-        <a class="navbar-item"> Contact us </a>
-      </nav>
-      <header>
-        <div class="hero-body">
-          <h1 class="title" id="main-title">
-            COCKTAIL PARTY
-          </h1>
-      </header>
-      <button class="button is-rounded" id="main-button"><h2><a href="#Learn-More">Learn More</a></h2></button>
-      <button class="button is-rounded" id="main-button-2"><h2><a href="./food.html">Click to see our partnered food website</a></h2></button>
-    </section>
-    <div class="columns">
-      <div class="column">
-      <section class="section has-bg-img" id="search-box">
-        <div class="container">
-          <h1 class="title">Want to search a cocktail you know about?</h1>
-          <h2>Enter cocktail name</h2>
-          <br>
-          <div class="control">
-            <input class="input" type="text" id="userInput">
-          </div>
-          <br>
-          <div class="control">
-            <button class="button is-primary" onclick="userInputCocktail()">Press Me!!!</button>
-          </div>
-        </div>
-      </section>
-      </div>
-      <div id="Learn-More"></div>
-      <div class="column">
-        <section class="section has-bg-img" id="search-box">
-          <h1 class="title">Want a random drink?</h1>
-          <h2>Press here for a random suggestion</h2>
-          <br>
-            <div class="control">
-              <button class="button is-primary" id="randomDrink" onclick="randomCocktail()">Press Me!!!</button>
-            </div>
-        </section>
-        </div>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"
+  />
+  <link rel="stylesheet" href="./assets/food.css" />
+  <title>Document</title>
+</head>
+<body>
+  <header>
+    <div class="image">
+      <a href="#click-here" class="to-top">Click Here</a>
     </div>
-    <div class = "search-result">
-      <div class="row" id="#display">
-        <div class="col-xs-push-2 col-xs-5" id="picture"></div>
-        <div class="col-xs-push-1 col-xs-4" id="info">
-            <div id="name"></div>
-            <div id="ingridients"></div>
-            <div id="instructions"></div>
-        </div>
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="./script.js"></script>
-  </body>
+  </header>
+
+
+  <div class="columns">
+    <div class="column">
+
+<section class="section has-bg-img" id="search-box">
+<div class="container">
+  <h1 class="title">Want to search a Food Recipe you know about?</h1>
+  <h2>Enter Recipe name</h2>
+  <br>
+  <div class="control">
+     <input class="input" type="text" id="userInput" />
+  </div>
+  <br/>
+
+  <div class="control">
+    <button class="button is-primary">Press Me!!!</button>
+  </div>
+</div>
+</section>
+</div>
+<div id="click-here"></div>
+<div class="column-2">
+  <section class="section has-bg-img" id="search-box">
+    <h1 class="title">Want a random Recipe?</h1>
+    <h2>Press here for a random suggestion</h2>
+    <br />
+    <div class="control">
+      <button class="button is-primary" id="randomDrink">
+        Press Me!!!
+      </button>
+    </div>
+</div>
+</div>
+<section class="form-input">
+  <div class="categories1">
+    <button class="button is-large" id="image-styling">Vegetarian</button>
+    <p class="Vegetarian"></p>
+  </div>
+  <div class="categories2">
+    <button class="button is-large" id="background-style">Chicken</button>
+    <p class="chicken"></p>
+  </div>
+  <div class="categories3">
+    <button class="button is-large" id="seafood-image">Seafood</button>
+    <p class="seafood"></p>
+  </div>
+  <div class="categories4">
+    <button class="button is-large" id="dessert-image">Dessert</button>
+    <p class="Dessert"></p>
+  </div>
+</section>
+
+<script src="./assets/script.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+</body>
+
+</body>
 </html>
