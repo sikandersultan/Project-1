@@ -26,6 +26,9 @@
   left: 150px;
   position: absolute;
 }
+.search-result {
+  text-align: center;
+}
 
 #main-button-2 {
   top: 200px;
