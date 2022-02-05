@@ -12,20 +12,17 @@
   margin-top: 2px;
   margin-left: 860px;
 }
-#categories {
+.is-large {
   height: 160px;
   width: 310px;
   margin: 0;
 }
 
 .form-input {
-  display: inline-block;
+  margin-right: 800px;
 }
 body {
   text-align: center;
-  font-size: 180%;
-
-  font-family: Calibri, arial, sans-serif;
 }
 .to-top {
   color: black;
@@ -35,8 +32,8 @@ body {
   border-color: black;
   text-decoration: none;
   transition: all 0.3s ease-out;
-  margin-top: 400px;
-  margin-left: 50%;
+  margin-top: 520px;
+  margin-right: 50%;
   font-weight: bolder;
   font-size: xx-large;
 }
@@ -47,7 +44,7 @@ body {
   top: 0;
   left: 50%;
   margin-left: -12px;
-  border: solid 2 white;
+  border: solid 2 black;
   border-radius: 160px;
   width: 22px;
   height: 22px;
