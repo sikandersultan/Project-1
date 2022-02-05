@@ -33,14 +33,17 @@
       <div class="column">
       <section class="section has-bg-img" id="search-box">
         <div class="container">
-          <h1 class="title">Want to search a cocktail you know about?</h1>
-          <h2>Enter cocktail name</h2>
-          <div class="control">
-            <input class="input" type="text" id="userInput">
-          </div>
-          <div class="control">
-            <button class="button is-primary" onclick="userInputCocktail()">Press Me!!!</button>
-          </div>
+          <form id="cocktailForm">
+
+            <h1 class="title">Want to search a cocktail you know about?</h1>
+            <h2>Enter cocktail name</h2>
+            <div class="control">
+              <input class="input" type="text" id="userInput">
+            </div>
+            <div class="control">
+              <button class="button is-primary" type="submit">Press Me!!!</button>
+            </div>
+          </form>
         </div>
       </section>
       </div>
@@ -62,6 +65,24 @@
             <div id="name"></div>
             <div id="ingridients"></div>
             <div id="instructions"></div>
+        </div>
+        <div class="container" id="app">
+          <div id="image-modal" class="modal">
+            <div class="modal-background"></div>
+            <div class="modal-content">
+             <div class="modal-card">
+            <header class="modal-card-head">
+              <p class="modal-card-title">Modal title</p>
+            </header>
+            <section class="modal-card-body">
+              <p>AAAAAAAAAAAAAA REEEEEEEEEEEEEEEEEEEEEEEEEE</p>
+            </section>
+          </div>
+            </div>
+            <button id="image-modal-close" class="modal-close"></button>
+          </div>
+          <br>
+            <button class="button" id="showModal">Show</button>
         </div>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="./script.js"></script>

@@ -8,20 +8,37 @@ function randomCocktail() {
 }
 
 var searched = document.getElementById('userInput')
+var cocktailFormEl = document.getElementById('cocktailForm')
 
-searched.addEventListener('change', () => {
+cocktailFormEl.addEventListener("submit", (event) => {
+    event.preventDefault()
+
     var searchValue = searched.value
-    userInputCocktail(searchValue)
-    console.log(searchValue)
+   
+    if (!searchValue) {
+       alert("The user did not enter a cocktail to search for")
+    } else {
+        userInputCocktail(searchValue)
+        console.log(searchValue)
+    }
 })
 
 function userInputCocktail (somethingIdk) {
     return fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${somethingIdk}`)
     .then((response) => response.json())
     .then((details) => {
-        userCocktailHTML(details)
+        var { drinks }= details
+        if (drinks === null) {
+            console.log("noooooooo")
+            // we got stuff back good 
+        } else {
+            // something probably went wrong
+            console.log("yayyyyyyy")
+            userCocktailHTML(details)
+        }
     })
 }
+
 
 function randomCocktailHTML(details) {
     var { drinks } = details
@@ -73,3 +90,14 @@ function userCocktailHTML(details) {
     }
     cocktailInformation.innerHTML = ingredientInfo.join('')
 }
+
+var btn = document.querySelector('#showModal');
+var modalDlg = document.querySelector('#image-modal');
+var imageModalCloseBtn = document.querySelector('#image-modal-close');
+btn.addEventListener('click', function(){
+  modalDlg.classList.add('is-active');
+});
+
+imageModalCloseBtn.addEventListener('click', function(){
+  modalDlg.classList.remove('is-active');
+});
