@@ -8,20 +8,38 @@ function randomCocktail() {
 }
 
 var searched = document.getElementById('userInput')
+var cocktailFormEl = document.getElementById('cocktailForm')
 
-searched.addEventListener('change', () => {
+cocktailFormEl.addEventListener("submit", (event) => {
+    event.preventDefault()
+
     var searchValue = searched.value
-    userInputCocktail(searchValue)
-    console.log(searchValue)
+   
+    if (!searchValue) {
+        errorMsg("We need a name for a drink plsssssss thank you :)")
+    } else {
+        userInputCocktail(searchValue)
+        console.log(searchValue)
+    }
 })
 
 function userInputCocktail (somethingIdk) {
     return fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${somethingIdk}`)
     .then((response) => response.json())
     .then((details) => {
-        userCocktailHTML(details)
+        var { drinks }= details
+        if (drinks === null) {
+            console.log("noooooooo")
+            errorMsg("It seems the drink does not exist. Big Ooofs.")
+            // we got stuff back good 
+        } else {
+            // something probably went wrong
+            console.log("yayyyyyyy")
+            userCocktailHTML(details)
+        }
     })
 }
+
 
 function randomCocktailHTML(details) {
     var { drinks } = details
@@ -73,3 +91,12 @@ function userCocktailHTML(details) {
     }
     cocktailInformation.innerHTML = ingredientInfo.join('')
 }
+
+function errorMsg(msg) {
+  $("#modalId").addClass("is-active");
+  $("#modalMsg").html(msg);
+}
+function close() {
+  $("#modalId").removeClass("is-active");
+}
+$("#modalBtn").click(close);
