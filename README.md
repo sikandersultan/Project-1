@@ -14,5 +14,6 @@ The link to our deployed website is [here](https://sikandersultan.github.io/Proj
 - CSS
 - jQuery
 - AJAX
--[The Cocktail Database](https://www.thecocktaildb.com/api.php) (Drinks API)
--[Bulma.io](https://bulma.io/) (CSS framework)
+- [The Meal Database](https://www.themealdb.com/api.php?ref=apilist.fun) (Food API)
+- [The Cocktail Database](https://www.thecocktaildb.com/api.php) (Drinks API)
+- [Bulma.io](https://bulma.io/) (CSS framework)
