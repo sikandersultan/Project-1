@@ -155,7 +155,7 @@ function getFoodInfo(data) {
   });
 }
 
-categoryList();
+$(".to-top").on("click", categoryList);
 
 var date = new Date();
 document.getElementById("date").innerHTML = date;
