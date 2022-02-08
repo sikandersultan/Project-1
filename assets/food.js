@@ -123,6 +123,7 @@ function categoryList() {
     })
     .then(function (data) {
       getFoodInfo(data);
+      console.log(data);
     });
 }
 
@@ -155,3 +156,6 @@ function getFoodInfo(data) {
 }
 
 categoryList();
+
+var date = new Date();
+document.getElementById("date").innerHTML = date;
