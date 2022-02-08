@@ -114,3 +114,48 @@ $("#searchRecipe").click(function () {
 });
 $("#modalBtn").click(close);
 $(document).on("click", invokePastSearch);
+
+//function will load all categories from api
+function categoryList() {
+  fetch("https://www.themealdb.com/api/json/v1/1/categories.php")
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      getFoodInfo(data);
+      console.log(data);
+    });
+}
+
+//this function first loops through all categories then
+//creates a button for each categoriy and appends it to
+//the allCategories html div
+
+//also the function will register an on click listener to each button created and trigger a modal open when any button is clicked
+var modal = document.querySelector(".modal");
+
+function getFoodInfo(data) {
+  data.categories.forEach((category) => {
+    var allCategoryNode = document.querySelector("#allCategories");
+
+    var categoryButton = document.createElement("button");
+    categoryButton.innerHTML = category.strCategory;
+
+    categoryButton.addEventListener("click", () => {
+      modal.classList.add("is-active");
+      //change modal text to category description
+
+      document.querySelector("#modalText").innerHTML =
+        category.strCategoryDescription;
+
+      $("#model1").modal("show");
+    });
+
+    allCategoryNode.appendChild(categoryButton);
+  });
+}
+
+categoryList();
+
+var date = new Date();
+document.getElementById("date").innerHTML = date;

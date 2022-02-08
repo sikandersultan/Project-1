@@ -22,10 +22,6 @@
   background-size: cover;
 }
 
-.form-input {
-  margin-right: 950px;
-  margin-top: -270px;
-}
 body {
   text-align: center;
 }
@@ -37,7 +33,7 @@ body {
   border-color: black;
   text-decoration: none;
   transition: all 0.3s ease-out;
-  margin-top: 520px;
+  margin-top: 450px;
   margin-right: 50%;
   font-weight: bolder;
   font-size: xx-large;
@@ -72,12 +68,13 @@ body {
 
 .column-2 {
   border: black 2px solid;
-  border-radius: 70px;
+  border-radius: 200px;
+  transform: rotate(-5deg);
 }
 
 .columns {
   margin-top: 20px;
-  margin-right: 80px;
+  margin-right: 50px;
 }
 
 .plan {
@@ -88,18 +85,39 @@ body {
   visibility: visible;
 }
 
-#image-styling {
-  background-image: url(../assets/images/download.jpg);
+#allCategories {
+  display: inline-flex;
+  height: 60px;
+  width: 310px;
+  color: white;
 }
 
-#background-style {
-  background-image: url(../assets/images/istockphoto-1194435519-612x612.jpg);
+.allModals {
+  margin-top: -270px;
+  margin-right: 970px;
 }
 
-#seafood-image {
-  background-image: url(../assets/images/download\ 876.jpg);
+#picture {
+  margin-left: -500px;
 }
 
-#dessert-image {
-  background-image: url(../assets/images/photo-1574085733277-851d9d856a3a.jpg);
+.hide {
+  visibility: hidden;
+}
+
+#contact {
+  text-align: center;
+  margin: auto;
+  font-size: 20px;
+  transform: translateY(400px);
+  width: 85%;
+  padding: 30px;
+  border: 0;
+  border-radius: 70px;
+  min-height: 200px;
+}
+
+.navbar img {
+  height: 55px;
+  width: 100px;
 }
