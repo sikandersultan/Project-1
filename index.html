@@ -15,20 +15,38 @@
   </head>
   <body>
     <section class="image">
-      <nav class="navbar-end">
-        <a class="navbar-item"> Recipes </a>
-        <a class="navbar-item"> More </a>
-        <a class="navbar-item"> Contact us </a>
-      </nav>
+      
       <header>
         <div class="hero-body">
           <h1 class="title" id="main-title">
             COCKTAIL PARTY
           </h1>
       </header>
-      <button class="button is-rounded" id="main-button"><h2><a href="#Learn-More">Learn More</a></h2></button>
+      <div class="dropdown is-hoverable">
+        <div class="dropdown-trigger">
+          <button class="button is-rounded" id="main-button" aria-haspopup="true" aria-controls="dropdown-menu4">
+            <div>Learn More</div>
+            <span class="icon is-small">
+              <i class="fas fa-angle-down" aria-hidden="true"></i>
+            </span>
+          </button>
+        </div>
+        <div class="dropdown-menu" id="dropdown-menu4" role="menu">
+          <div class="dropdown-content">
+            <div class="dropdown-item">
+              <a href="#move-down" class="Non-Alcoholic">Non-Alcoholic</a> <br>
+              <a href="#move-down" class="Alcoholic"> Alcoholic</a>
+            </div>
+          </div>
+        </div>
+      </div>
       <button class="button is-rounded" id="main-button-2"><h2><a href="./food.html">Click to see our partnered food website</a></h2></button>
     </section>
+
+    <div id="allCategories">  
+    </div>
+    <div id="move-down"></div>
+
     <div class="columns">
       <div class="column">
       <section class="section has-bg-img" id="search-box">
@@ -41,8 +59,6 @@
             <div class="control">
               <input class="input" type="text" id="userInput">
             </div>
-            <br />
-            <div class="field is-grouped" id="searchHistory"></div>
             <br />
             <div class="control">
               <button class="button is-primary" type="submit">Press Me!!!</button>
