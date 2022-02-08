@@ -15,7 +15,27 @@
   <body>
     <header>
       <div class="image">
-        <a href="#click-here" class="to-top">Click Here</a>
+        <nav class="navbar" role="navigation" aria-label="dropdown navigation">
+          <img data-v-48be450a="" src="./assets/images/9a5a90baa097e7822a05d025_rw_1920.gif">
+          <img data-v-48be450a="" src="./assets/images/72b96263b7820864bba1eae7_rw_1920.gif">
+          <img data-v-48be450a="" src="./assets/images/3.gif">
+          <img data-v-48be450a="" src="./assets/images/4.gif">
+          <img data-v-48be450a="" src="./assets/images/6.gif">
+          <div class="navbar-item has-dropdown is-hoverable">
+            <a class="navbar-link">
+              Menu
+            </a>
+            <div class="navbar-dropdown">
+              <a href="#navbar-item" class="navbar-item">Contact Us </a>
+              <hr class="navbar-divider">
+              <div class="navbar-item">
+                Version 0.9.3
+              </div>
+            </div>
+          </div>
+          <div id="date"></div>
+        </nav>
+        <a href="#click-here" class="to-top" id="button">Click Here</a>
       </div>
     </header>
 
@@ -42,7 +62,7 @@
       </div>
 
       <div id="click-here"></div>
-  
+      
       <div class="column-2">
         <section class="section has-bg-img" id="search-box">
           <h1 class="title">Want a random Recipe?</h1>
@@ -55,16 +75,18 @@
           </div>
       </div>
       </div>
-   
+
 <section class="allModals">
     <div id="allCategories">  
     </div>
     
     <div id="model1" class="modal">
       <p id="modalText">Thanks for clicking. That felt good.</p>
+      <div id="picture2"></div>
       <a href="#" rel="modal:close">Close</a>
     </div>
   </section>
+  
 
   <div class="search-result" id="pressMe">
     <div class="row" id="#display">
@@ -84,11 +106,31 @@
         <p class="modal-card-title" id="modalMsg"></p>
         
       </header>
-      <footer class="modal-card-body is-centered">
+      <div class="modal-card-body is-centered">
         <button class="button" id="modalBtn">Close</button>
-      </footer>
+      </div>
     </div>
   </div>
+  
+  <footer>
+  <div id="navbar-item"></div>
+  <section id="contact">
+    <h2>Let's Connect!</h2>
+    <a target="_blank" href="https://github.com/KJ234">Komal
+      <i class="fab fa-github" aria-hidden="true"></i>
+    <a target="_blank" href="https://github.com/KJ234">Sikander
+        <i class="fab fa-github" aria-hidden="true"></i>
+    <a target="_blank" href="https://github.com/KJ234">Elliott
+          <i class="fab fa-github" aria-hidden="true"></i> <br><br>
+    <a target="_blank" rel="noopener noreferrer" href="mailto:.com">
+            <i class="fas fa-envelope" aria-hidden="true"></i>
+        </a>
+     <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com">
+          <i class="fab fa-linkedin" aria-hidden="true"></i>
+      </a>
+  </a>
+</section>
+  </footer>
   
   
   
@@ -98,6 +140,7 @@
   
   <!-- jQuery Modal -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+  <script src="https://kit.fontawesome.com/92c416e97f.js" crossorigin="anonymous"></script>
   
     <script src="./assets/food.js"></script>
   </body>
