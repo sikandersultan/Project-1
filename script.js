@@ -43,7 +43,7 @@ function userInputCocktail(somethingIdk) {
     .then((details) => {
       var { drinks } = details;
       if (drinks === null) {
-        errorMsg("It seems the drink does not exist. Big Ooofs.");
+        errorMsg("It seems the drink does not exist. Big Ooofs :(");
       } else {
         userCocktailHTML(details);
         if (!searchHistory.includes(somethingIdk)) {
