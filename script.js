@@ -1,5 +1,7 @@
+// this is to make an array of drinks in local storage
 var searchHistory = [];
 
+// when the button on the website is pushed for a random cocktail, this function fires off
 function randomCocktail() {
   return fetch(`https://www.thecocktaildb.com/api/json/v1/1/random.php`)
     .then((response) => response.json())
@@ -9,10 +11,16 @@ function randomCocktail() {
     .catch((error) => console.log(error));
 }
 
+// some variables to call in ID's from the html page
 var searched = document.getElementById("userInput");
 var cocktailFormEl = document.getElementById("cocktailForm");
 var submitBtn = document.getElementById("submitBtn");
 
+// this actually used to be a form submit. Which was a major pain in the behind because 
+// i totally forgot that how form submits worked and wacked my brain an entire afternoon 
+// trying to make it work with the local storage search. Elliott the absolute god-level coder 
+// genious pointed that out and fixed it in no time. I am forever in debt to her. Anyway this 
+// is where we take the drink input from the user if he wants to search one up :)
 submitBtn.addEventListener("click", (event) => {
   event.preventDefault();
 
@@ -26,6 +34,7 @@ submitBtn.addEventListener("click", (event) => {
   }
 });
 
+// this function fires off when the search button on the user input area is clicked
 function userInputCocktail(somethingIdk) {
   return fetch(
     `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${somethingIdk}`
@@ -46,6 +55,7 @@ function userInputCocktail(somethingIdk) {
     });
 }
 
+// this gets the api response for the input drink from the local storage
 function storedDrinkSearch(somethingIdk) {
   var url =
     `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=` + somethingIdk;
@@ -57,6 +67,7 @@ function storedDrinkSearch(somethingIdk) {
     });
 }
 
+// this takes the api response from the random drinks functions and displays it on the html page
 function randomCocktailHTML(details) {
   var { drinks } = details;
   var picture = document.getElementById("picture");
@@ -82,6 +93,8 @@ function randomCocktailHTML(details) {
   cocktailInformation.innerHTML = ingredientInfo.join("");
 }
 
+// this takes the api response from the user input drink function as well as the local storage api response
+// and displays it on the html page
 function userCocktailHTML(details) {
   var { drinks } = details;
   var picture = document.getElementById("picture");
@@ -107,6 +120,7 @@ function userCocktailHTML(details) {
   cocktailInformation.innerHTML = ingredientInfo.join("");
 }
 
+// loads the local storage on the page
 function loadSearchHistory() {
   searchHistory = JSON.parse(localStorage.getItem("searchHistory"));
 
@@ -134,10 +148,13 @@ function invokePastSearch(event) {
   }
 }
 
+// the error modal things
 function errorMsg(msg) {
   $("#modalId").addClass("is-active");
   $("#modalMsg").html(msg);
 }
+
+// to close the error modal things
 function close() {
   $("#modalId").removeClass("is-active");
 }
