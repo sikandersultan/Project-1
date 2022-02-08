@@ -33,8 +33,7 @@ body {
   border-color: black;
   text-decoration: none;
   transition: all 0.3s ease-out;
-  margin-top: 450px;
-  margin-right: 50%;
+  margin-top: 200px;
   font-weight: bolder;
   font-size: xx-large;
 }
@@ -70,6 +69,8 @@ body {
   border: black 2px solid;
   border-radius: 200px;
   transform: rotate(-5deg);
+  margin-top: -500px;
+  margin-bottom: 250px;
 }
 
 .columns {
@@ -97,10 +98,6 @@ body {
   margin-right: 970px;
 }
 
-#picture {
-  margin-left: -500px;
-}
-
 .hide {
   visibility: hidden;
 }
@@ -109,7 +106,6 @@ body {
   text-align: center;
   margin: auto;
   font-size: 20px;
-  transform: translateY(400px);
   width: 85%;
   padding: 30px;
   border: 0;
@@ -120,4 +116,12 @@ body {
 .navbar img {
   height: 55px;
   width: 100px;
+}
+.container {
+  position: absolute;
+  margin-right: 70%;
+}
+.title {
+  color: rgb(4, 188, 212);
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
