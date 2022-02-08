@@ -1,3 +1,5 @@
+var searchHistory = []
+
 function randomCocktail() {
     return fetch(`https://www.thecocktaildb.com/api/json/v1/1/random.php`)
     .then((response) => response.json())
@@ -23,20 +25,30 @@ cocktailFormEl.addEventListener("submit", (event) => {
     }
 })
 
+
 function userInputCocktail (somethingIdk) {
     return fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${somethingIdk}`)
     .then((response) => response.json())
     .then((details) => {
         var { drinks }= details
         if (drinks === null) {
-            console.log("noooooooo")
-            errorMsg("It seems the drink does not exist. Big Ooofs.")
-            // we got stuff back good 
+            errorMsg("It seems the drink does not exist. Big Ooofs.") 
         } else {
-            // something probably went wrong
-            console.log("yayyyyyyy")
             userCocktailHTML(details)
+            if (!searchHistory.includes(somethingIdk)) {
+                searchHistory.push(somethingIdk)
+                localStorage.setItem("searchHistory" , JSON.stringify(searchHistory))
+                loadSearchHistory()
+            }
         }
+    })
+}
+
+function storedDrinkSearch (somethingIdk) {
+    return fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${somethingIdk}`)
+    .then((response) => response.json())
+    .then((details) => {
+            userCocktailHTML(details)
     })
 }
 
@@ -92,6 +104,33 @@ function userCocktailHTML(details) {
     cocktailInformation.innerHTML = ingredientInfo.join('')
 }
 
+function loadSearchHistory() {
+    searchHistory = JSON.parse(localStorage.getItem("searchHistory"));
+    
+    var container = $("#searchHistory");
+    container.empty();
+    if (searchHistory !== null) {
+      for (var i = 0; i < searchHistory.length; i++) {
+        var pEl = $("<p>");
+        pEl.attr("class", "control");
+        var btnEl = $("<button>");
+        btnEl.attr("class", "button is-link history");
+        btnEl.html(searchHistory[i]);
+        pEl.append(btnEl);
+        container.append(pEl);
+      
+    }
+    }
+}
+
+function invokePastSearch(event) {
+    var btnEl = event.target;
+    if (event.target.matches(".history")) {
+      var somethingIdk = btnEl.textContent.trim();
+      storedDrinkSearch(somethingIdk);
+    }
+}
+  
 function errorMsg(msg) {
   $("#modalId").addClass("is-active");
   $("#modalMsg").html(msg);
@@ -100,3 +139,4 @@ function close() {
   $("#modalId").removeClass("is-active");
 }
 $("#modalBtn").click(close);
+$(document).on("click", invokePastSearch);
