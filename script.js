@@ -11,8 +11,9 @@ function randomCocktail() {
 
 var searched = document.getElementById("userInput");
 var cocktailFormEl = document.getElementById("cocktailForm");
+var submitBtn = document.getElementById("submitBtn");
 
-cocktailFormEl.addEventListener("submit", (event) => {
+submitBtn.addEventListener("click", (event) => {
   event.preventDefault();
 
   var searchValue = searched.value;
@@ -46,11 +47,12 @@ function userInputCocktail(somethingIdk) {
 }
 
 function storedDrinkSearch(somethingIdk) {
-  return fetch(
-    `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${somethingIdk}`
-  )
+  var url =
+    `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=` + somethingIdk;
+  fetch(url)
     .then((response) => response.json())
     .then((details) => {
+      console.log(details);
       userCocktailHTML(details);
     });
 }
@@ -127,6 +129,7 @@ function invokePastSearch(event) {
   var btnEl = event.target;
   if (event.target.matches(".history")) {
     var somethingIdk = btnEl.textContent.trim();
+    console.log(btnEl);
     storedDrinkSearch(somethingIdk);
   }
 }
