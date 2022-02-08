@@ -156,6 +156,11 @@ function getFoodInfo(data) {
 }
 
 $(".to-top").on("click", categoryList);
-
-var date = new Date();
+var options = {
+  weekday: "long",
+  year: "numeric",
+  month: "long",
+  day: "numeric",
+};
+var date = new Date().toLocaleDateString("en-GB", options);
 document.getElementById("date").innerHTML = date;
