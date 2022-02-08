@@ -127,4 +127,27 @@ function getnameInfo(data) {
   });
 }
 
-$(".Sections").on("click", byDrink);
+function alcholicDrink() {
+  fetch("https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Alcoholic")
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      console.log(data);
+      getDrinkInfo(data);
+    });
+
+  function getDrinkInfo(data) {
+    data.drinks.forEach((drinks) => {
+      var allCategoryNode = document.querySelector("#allCategories");
+
+      var categoryButton = document.createElement("button");
+      categoryButton.innerHTML = drinks.strDrink;
+
+      allCategoryNode.appendChild(categoryButton);
+    });
+  }
+}
+
+$(".Non-Alcoholic").on("click", byDrink);
+$(".Alcoholic").on("click", alcholicDrink);
