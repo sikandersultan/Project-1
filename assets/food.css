@@ -192,3 +192,7 @@ footer {
 .footer-text {
   color: aliceblue;
 }
+
+.instructions {
+  text-align: left;
+}

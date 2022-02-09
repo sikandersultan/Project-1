@@ -38,7 +38,7 @@ function displayRecipeHTML(details) {
 
   var instructions = $("#instructions");
   instructions.html(
-    `<h3>Instructions:</h3><p>${details.meals[0].strInstructions}</p>`
+    `<h3>Instructions:</h3><p class="instructions">${details.meals[0].strInstructions}</p>`
   );
 }
 
