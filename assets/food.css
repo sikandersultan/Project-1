@@ -101,11 +101,8 @@ body {
   visibility: visible;
 }
 
-#allCategories {
-  display: inline-flex;
-  height: 60px;
-  width: 310px;
-  color: white;
+#extra-help {
+  float: right;
 }
 
 .allModals {
