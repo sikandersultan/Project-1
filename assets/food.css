@@ -194,3 +194,12 @@ footer {
 .instructions {
   text-align: left;
 }
+
+@media screen and (max-width: 800px) {
+  .navbar {
+    display: flex;
+  }
+  img {
+    display: inline-flex;
+  }
+}
