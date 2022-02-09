@@ -134,7 +134,9 @@ function categoryList() {
 //the allCategories html div
 
 //also the function will register an on click listener to each button created and trigger a modal open when any button is clicked
+
 var modal = document.querySelector(".modal");
+var extra = document.querySelector("#extra-help");
 
 function getFoodInfo(data) {
   data.categories.forEach((category) => {
@@ -166,3 +168,9 @@ var options = {
 };
 var date = new Date().toLocaleDateString("en-GB", options);
 document.getElementById("date").innerHTML = date;
+
+function help() {
+  extra.classList.add("is-active");
+}
+
+$("#to-top").on("click", help);
