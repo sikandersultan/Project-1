@@ -137,8 +137,9 @@ function categoryList() {
 var modal = document.querySelector(".modal");
 
 function getFoodInfo(data) {
-  var categoryButtons = [];
   data.categories.forEach((category) => {
+    var allCategoryNode = document.querySelector("#allCategories");
+
     var categoryButton = document.createElement("button");
     categoryButton.innerHTML = category.strCategory;
 
@@ -152,17 +153,11 @@ function getFoodInfo(data) {
       $("#model1").modal("show");
     });
 
-    document.querySelector("#modalCategories").appendChild(categoryButton);
-
-    categoryButtons.push(categoryButton);
+    allCategoryNode.appendChild(categoryButton);
   });
-
-  document.querySelector("#modalText").innerHTML = "select a category";
-
-  $("#model1").modal("show");
 }
 
-$("#to-top").on("click", categoryList);
+$(".to-top").on("click", categoryList);
 var options = {
   weekday: "long",
   year: "numeric",
