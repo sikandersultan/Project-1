@@ -174,3 +174,7 @@ function help() {
 }
 
 $("#to-top").on("click", help);
+
+$(".btn").click(function () {
+  extra.classList.remove("is-active");
+});
