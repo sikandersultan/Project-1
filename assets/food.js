@@ -11,14 +11,16 @@ function randomRecipe() {
 
 //display the recipe on the page
 function displayRecipeHTML(details) {
+  $(".search-result").css("background-color", "rgb(255, 255, 255, 0.7)");
+  $("footer").css("position", "relative");
   var picture = $("#picture");
   var foodPic =
     "<img class='mealThumb' src=" + details.meals[0].strMealThumb + ">";
   picture.html(foodPic);
 
   var mealName = $("#name");
-  mealName.html(`<h4> ${details.meals[0].strMeal} </h4>
-  <p>Category:</p><p>${details.meals[0].strArea}</p>`);
+  mealName.html(`<h1> ${details.meals[0].strMeal} </h1>
+  <h3>Category:</h3><p>${details.meals[0].strArea}</p>`);
 
   var mealInfo = $("#ingredients");
   var ingredientInfo = [];
@@ -32,11 +34,11 @@ function displayRecipeHTML(details) {
     var information = `<p>${details.meals[0][measuringKey]} ${ingredient}</p>`;
     ingredientInfo.push(information);
   }
-  mealInfo.html(`<p>Ingredients:</p><p>${ingredientInfo.join("")}</p>`);
+  mealInfo.html(`<h3>Ingredients:</h3><p>${ingredientInfo.join("")}</p>`);
 
   var instructions = $("#instructions");
   instructions.html(
-    `<p>Instructions:</p><p>${details.meals[0].strInstructions}</p>`
+    `<h3>Instructions:</h3><p>${details.meals[0].strInstructions}</p>`
   );
 }
 
