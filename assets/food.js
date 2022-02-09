@@ -134,14 +134,11 @@ function categoryList() {
 //the allCategories html div
 
 //also the function will register an on click listener to each button created and trigger a modal open when any button is clicked
-
 var modal = document.querySelector(".modal");
-var extra = document.querySelector("#extra-help");
 
 function getFoodInfo(data) {
+  var categoryButtons = [];
   data.categories.forEach((category) => {
-    var allCategoryNode = document.querySelector("#allCategories");
-
     var categoryButton = document.createElement("button");
     categoryButton.innerHTML = category.strCategory;
 
@@ -155,8 +152,14 @@ function getFoodInfo(data) {
       $("#model1").modal("show");
     });
 
-    allCategoryNode.appendChild(categoryButton);
+    document.querySelector("#modalCategories").appendChild(categoryButton);
+
+    categoryButtons.push(categoryButton);
   });
+
+  document.querySelector("#modalText").innerHTML = "select a category";
+
+  $("#model1").modal("show");
 }
 
 $("#to-top").on("click", categoryList);
@@ -168,13 +171,3 @@ var options = {
 };
 var date = new Date().toLocaleDateString("en-GB", options);
 document.getElementById("date").innerHTML = date;
-
-function help() {
-  extra.classList.add("is-active");
-}
-
-$("#to-top").on("click", help);
-
-$(".btn").click(function () {
-  extra.classList.remove("is-active");
-});
