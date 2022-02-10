@@ -36,5 +36,10 @@ The link to our deployed website is [here](https://sikandersultan.github.io/Proj
 - Komal: Styling the food and drinks website as well as coming up with new ideas on how to make it look better with cleaner looking UI
 - Sikander: Mostly working on the front end and back end of the drink part of the website 
 
-##Demo Gifs
+## Demo Gif for food website
+
+![Sample of page](/assets/images/food.gif)
+
+## Demo Gif for drinks website
+
 ![Sample of page](/assets/images/cocktail.gif)
