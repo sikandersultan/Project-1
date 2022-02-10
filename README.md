@@ -35,3 +35,6 @@ The link to our deployed website is [here](https://sikandersultan.github.io/Proj
 - Elliott: Mainly responsible for the food part of the website, front end and back end. Also helped a lot in debugging
 - Komal: Styling the food and drinks website as well as coming up with new ideas on how to make it look better with cleaner looking UI
 - Sikander: Mostly working on the front end and back end of the drink part of the website 
+
+##Demo Gifs
+![Sample of page](/assets/images/cocktail.gif)
