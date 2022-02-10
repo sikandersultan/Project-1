@@ -45,7 +45,7 @@ function userInputCocktail(somethingIdk) {
       if (drinks === null) {
         errorMsg("It seems the drink does not exist. Big Ooofs :(");
       } else {
-        userCocktailHTML(details);
+        randomCocktailHTML(details);
         if (!searchHistory.includes(somethingIdk)) {
           searchHistory.push(somethingIdk);
           localStorage.setItem("searchHistory", JSON.stringify(searchHistory));
@@ -63,7 +63,7 @@ function storedDrinkSearch(somethingIdk) {
     .then((response) => response.json())
     .then((details) => {
       console.log(details);
-      userCocktailHTML(details);
+      randomCocktailHTML(details);
     });
 }
 
@@ -101,30 +101,30 @@ function randomCocktailHTML(details) {
 
 // this takes the api response from the user input drink function as well as the local storage api response
 // and displays it on the html page
-function userCocktailHTML(details) {
-  var { drinks } = details;
-  var picture = document.getElementById("picture");
-  picture.innerHTML = `<img class="drinkThumb" src= "${drinks[0].strDrinkThumb}">`;
+// function userCocktailHTML(details) {
+//   var { drinks } = details;
+//   var picture = document.getElementById("picture");
+//   picture.innerHTML = `<img class="drinkThumb" src= "${drinks[0].strDrinkThumb}">`;
 
-  var cocktailName = document.getElementById("name");
-  cocktailName.innerHTML = `<h4> ${drinks[0].strDrink} </h4>
-    <p>Type of glass:</p><p>${drinks[0].strGlass}</p>`;
+//   var cocktailName = document.getElementById("name");
+//   cocktailName.innerHTML = `<h4> ${drinks[0].strDrink} </h4>
+//     <p>Type of glass:</p><p>${drinks[0].strGlass}</p>`;
 
-  var cocktailInformation = document.getElementById("ingridients");
-  var information = "";
-  var ingredientInfo = [];
-  for (var i = 1; i <= 15; i++) {
-    var measuringKey = "strMeasure" + i;
-    var ingridientKey = "strIngredient" + i;
-    var ingredient = drinks[0][ingridientKey];
+//   var cocktailInformation = document.getElementById("ingridients");
+//   var information = "";
+//   var ingredientInfo = [];
+//   for (var i = 1; i <= 15; i++) {
+//     var measuringKey = "strMeasure" + i;
+//     var ingridientKey = "strIngredient" + i;
+//     var ingredient = drinks[0][ingridientKey];
 
-    if (!ingredient) break;
+//     if (!ingredient) break;
 
-    information = `<p>${drinks[0][measuringKey]} ${ingredient}</p>`;
-    ingredientInfo.push(information);
-  }
-  cocktailInformation.innerHTML = ingredientInfo.join("");
-}
+//     information = `<p>${drinks[0][measuringKey]} ${ingredient}</p>`;
+//     ingredientInfo.push(information);
+//   }
+//   cocktailInformation.innerHTML = ingredientInfo.join("");
+// }
 
 // loads the local storage on the page
 function loadSearchHistory() {
