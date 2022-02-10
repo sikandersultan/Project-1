@@ -33,8 +33,12 @@
   top: 200px;
   left: 70px;
   position: absolute;
+  font-family: fantasy;
+  font-style: italic;
 }
-
+.btn-text {
+  color: rgb(223, 167, 49);
+}
 .search-result {
   margin: auto;
   margin-top: 20px;
