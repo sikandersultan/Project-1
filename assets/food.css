@@ -187,6 +187,7 @@ footer {
   bottom: 0;
   width: 100%;
   background-color: rgba(84, 175, 184, 0.8);
+  height: 130px;
 }
 
 .footer-text {
