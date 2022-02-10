@@ -32,9 +32,16 @@ The link to our deployed website is [here](https://sikandersultan.github.io/Proj
 - [Bulma.io](https://bulma.io/) (CSS framework)
 
 ## Tasks
+
 - Elliott: Mainly responsible for the food part of the website, front end and back end. Also helped a lot in debugging
 - Komal: Styling the food and drinks website as well as coming up with new ideas on how to make it look better with cleaner looking UI
 - Sikander: Mostly working on the front end and back end of the drink part of the website 
+
+## Future Developments
+
+For further development of our page we could do several other things. For starters, it could be more user-friendly. At the moment, we have not separated local storage values from the main page. It is next to the search box which makes it look a bit cluttered. Additionally, users should be able to add their searches or some random search as a favourite to make it easier to find. It could be a separate web page or be in a toolbar on top or on the side of the main web page.
+
+We could also add API’s related to maps which could help the user with not only finding what kind of food and drink they’d like, but also provide them with a resource on where to go to find the same variety of refreshments and dining. We could also add a link to some kind of visual aid on their searches like a YouTube video, which could help them visualise more what their dinner would be like. 
 
 ## Demo Gif for food website
 
