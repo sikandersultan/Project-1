@@ -8,6 +8,10 @@ https://sikandersultan.github.io/Project-1/
 
 https://github.com/sikandersultan/Project-1.git
 
+## User story
+
+As an extremly busy student that is also working part-time to afford my living expense, I find myself having no time to go through the millions of different food and drinks website. So I go to one website where all my food and drink ideas can be broken down to simple easy to read ingredients with specific measurements as well as concise instructions. Additionlly if the student isnt too sure what to have any given afternoon, this website can give him a random choice of food and drink as many times as the student pleases.
+
 ## Description
 
 Our website is all about food and drink, the cornerstones of literally any civilization. Imagine a world without drinks ouch.
@@ -26,3 +30,8 @@ The link to our deployed website is [here](https://sikandersultan.github.io/Proj
 - [The Meal Database](https://www.themealdb.com/api.php?ref=apilist.fun) (Food API)
 - [The Cocktail Database](https://www.thecocktaildb.com/api.php) (Drinks API)
 - [Bulma.io](https://bulma.io/) (CSS framework)
+
+## Tasks
+- Elliott: Mainly responsible for the food part of the website, front end and back end. Also helped a lot in debugging
+- Komal: Styling the food and drinks website as well as coming up with new ideas on how to make it look better with cleaner looking UI
+- Sikander: Mostly working on the front end and back end of the drink part of the website 
