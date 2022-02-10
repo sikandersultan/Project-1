@@ -34,3 +34,42 @@
   left: 70px;
   position: absolute;
 }
+
+.search-result {
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 35%;
+  padding: 10px;
+  border-radius: 30px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.title {
+  font-size: 40px;
+  font-weight: 600;
+}
+.sub-title {
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.text {
+  font-size: 20px;
+}
+.instructions {
+  text-align: left;
+}
+
+footer {
+  text-align: center;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  background-color: rgb(11, 11, 95);
+  color: aliceblue;
+}
+.footer-text {
+  color: aliceblue;
+}

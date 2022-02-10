@@ -16,10 +16,10 @@ var searched = document.getElementById("userInput");
 var cocktailFormEl = document.getElementById("cocktailForm");
 var submitBtn = document.getElementById("submitBtn");
 
-// this actually used to be a form submit. Which was a major pain in the behind because 
-// i totally forgot that how form submits worked and wacked my brain an entire afternoon 
-// trying to make it work with the local storage search. Elliott the absolute god-level coder 
-// genious pointed that out and fixed it in no time. I am forever in debt to her. Anyway this 
+// this actually used to be a form submit. Which was a major pain in the behind because
+// i totally forgot that how form submits worked and wacked my brain an entire afternoon
+// trying to make it work with the local storage search. Elliott the absolute god-level coder
+// genious pointed that out and fixed it in no time. I am forever in debt to her. Anyway this
 // is where we take the drink input from the user if he wants to search one up :)
 submitBtn.addEventListener("click", (event) => {
   event.preventDefault();
@@ -69,13 +69,15 @@ function storedDrinkSearch(somethingIdk) {
 
 // this takes the api response from the random drinks functions and displays it on the html page
 function randomCocktailHTML(details) {
+  $(".search-result").css("border-style", "solid");
+  $(".search-result").css("border-width", "5px");
   var { drinks } = details;
   var picture = document.getElementById("picture");
   picture.innerHTML = `<img class="drinkThumb" src= "${drinks[0].strDrinkThumb}">`;
 
   var cocktailName = document.getElementById("name");
-  cocktailName.innerHTML = `<h4> ${drinks[0].strDrink} </h4>
-    <p>Type of glass:</p><p>${drinks[0].strGlass}</p>`;
+  cocktailName.innerHTML = `<h1 class="title"> ${drinks[0].strDrink} </h1>
+    <h3 class="sub-title">Type of glass:</h3><p class="text">${drinks[0].strGlass}</p>`;
 
   var cocktailInformation = document.getElementById("ingridients");
   var information = "";
@@ -90,7 +92,11 @@ function randomCocktailHTML(details) {
     information = `<p>${drinks[0][measuringKey]} ${ingredient}</p>`;
     ingredientInfo.push(information);
   }
-  cocktailInformation.innerHTML = ingredientInfo.join("");
+  cocktailInformation.innerHTML = `<h3 class="sub-title">Ingredients:</h3><p class="text">${ingredientInfo.join(
+    ""
+  )}</p>`;
+  var instructions = document.getElementById("instructions");
+  instructions.innerHTML = `<h3 class="sub-title">Instructions:</h3><p class="instructions text">${drinks[0].strInstructions}</p>`;
 }
 
 // this takes the api response from the user input drink function as well as the local storage api response
